@@ -12,7 +12,7 @@ const index = () => {
     
         try {
           // Send login data to the backend for authentication
-          const response = await axios.post('http://localhost:3001/login', {
+          const response = await axios.post('http://localhost:3000/login', {
             username,
             password,
           });
