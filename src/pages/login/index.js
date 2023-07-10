@@ -12,7 +12,7 @@ const index = () => {
     
         try {
           // Send login data to the backend for authentication
-          const response = await axios.post('http://localhost:3000/login', {
+          const response = await axios.post('http://localhost:3001/login', {
             username,
             password,
           });
@@ -21,7 +21,7 @@ const index = () => {
           if (response.data.success) {
             // Perform necessary actions upon successful login, such as redirecting or setting a token
             console.log('Login successful');
-            router.push("/")
+            router.push("/questions")
           } else {
             console.log('Login failed');
           }
@@ -32,6 +32,7 @@ const index = () => {
 
     return (
         <div>
+          <h2>Anmelden</h2>
         <form className="form" onSubmit={handleLogin}>
           <label htmlFor="username">Username:</label>
           <input
@@ -54,7 +55,7 @@ const index = () => {
           <button type="submit">Login</button>
           <br/>
         </form>
-        <button onClick={() => router.push("/register")}>Register</button>
+       <button onClick={() => router.push("/register")}>Register</button>
       </div>
     );
 };

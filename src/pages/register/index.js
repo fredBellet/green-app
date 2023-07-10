@@ -9,7 +9,7 @@ function Anmelden() {
 
     try {
       // Send registration data to the backend API endpoint
-      await axios.post('http://localhost:3000/register', {
+      await axios.post('http://localhost:3001/register', {
         name,
         password,
       });
@@ -23,7 +23,7 @@ function Anmelden() {
 
   return (
     <div>
-      <h2>Anmelden</h2>
+      <h2>Register</h2>
       <form onSubmit={handleRegistration}>
         <label>
           Name:
