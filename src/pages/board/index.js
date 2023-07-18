@@ -12,10 +12,9 @@ const Results = () => {
         console.log(response,localStorage.getItem('username'));
         const sortedScores = response.data.sort((a, b) => {
           // Sort the scores in descending order based on the date
-          return new Date(b.date) - new Date(a.date);});
-        const matchingScores = sortedScores.filter((score) => score?.userId?.username === localStorage.getItem('username'));
-
-        setScores(matchingScores);
+          return (b.score)-(a.score);});
+        
+        setScores(sortedScores);
         setIsLoading(false);
       } catch (error) {
         console.error('Failed to fetch score:', error);

@@ -707,7 +707,7 @@ const handleSubmit = async (e) => {
               <label className="flex items-center">
                 <input
                   type="checkbox"
-                  value="Yes, i do"
+                  value="Yes"
                   checked={answers['energy']?.includes('Yes')}
                   onChange={(e) => {
                     const selectedOptions = answers['energy'] || [];
