@@ -63,19 +63,22 @@ const Login = () => {
             className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none"
           />
         </div>
+        <div className="flex space-x-4">
         <button
           type="submit"
           className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition-colors duration-300"
         >
           Login
         </button>
-      </form>
+   
       <button
         onClick={() => router.push('/register')}
-        className="mt-4 text-blue-500 hover:underline focus:outline-none"
+        className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md transition-colors duration-300"
       >
         Register
       </button>
+    </div>
+    </form>
     </div>
   );
 };

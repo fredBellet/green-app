@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/router';
+import Header from '../../components/headers';
+
 
 const Questions = () => {
   const [answers, setAnswers] = useState({});
@@ -174,6 +176,7 @@ const handleSubmit = async (e) => {
   
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-green-100">
+       <Header handleLogout={handleLogout} /> {}
       {!isAuthenticated ? null : (
         <>
           <button
