@@ -13,7 +13,7 @@ const Register = () => {
     try {
       // Send registration data to the backend API endpoint
       await axios.post('http://localhost:3001/register', {
-        name,
+        username: name,
         password,
       });
 
